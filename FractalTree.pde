@@ -15,10 +15,10 @@ public void draw()
   keyTyped();
 } 
 public void keyTyped(){
-  if(key == 'h'){
+  if(key == 'a'){
     branchAngle = branchAngle + 0.01;
   }
-  if(key == 'r'){
+  if(key == 'd'){
     branchAngle = branchAngle - 0.01;
   }
   redraw();
