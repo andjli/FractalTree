@@ -12,8 +12,17 @@ public void draw()
   stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));   
   line(320,480,320,380);   
   drawBranches(320,380,100,3*Math.PI/2);
+  keyTyped();
 } 
-
+public void keyTyped(){
+  if(key == 'h' && branchAngle <= 0.5){
+    branchAngle = branchAngle + 0.01;
+  }
+  if(key == 'r' && branchAngle >= 0.2){
+    branchAngle = branchAngle - 0.01;
+  }
+  redraw();
+}
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {     
   double angle1 = angle + branchAngle;
