@@ -16,12 +16,12 @@ public void draw()
 } 
 public void keyTyped(){
   if(key == 'a'){
-    branchAngle = branchAngle + 0.01;
+    branchAngle = branchAngle + 0.005;
   }
   if(key == 'd'){
-    branchAngle = branchAngle - 0.01;
+    branchAngle = branchAngle - 0.005;
   }
-  redraw();
+  draw();
 }
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {     
