@@ -12,17 +12,17 @@ public void draw()
   stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));   
   line(320,480,320,380);   
   drawBranches(320,380,100,3*Math.PI/2);
-  //keyPressed();
+  keyPressed();
 } 
-//public void keyPressed(){
-  //if(key == 'a'){
-    //branchAngle = branchAngle + 0.005;
-  //}
-  //if(key == 'd'){
-    //branchAngle = branchAngle - 0.005;
-  //}
-  //redraw();
-//}
+public void keyPressed(){
+  if(key == 'a'){
+    branchAngle = branchAngle + 0.005;
+  }
+  else if(key == 'd'){
+    branchAngle = branchAngle - 0.005;
+  }
+  redraw();
+}
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {     
   double angle1 = angle + branchAngle;
