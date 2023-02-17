@@ -21,9 +21,7 @@ public void keyPressed(){
   else if(key == 'd'){
     branchAngle = branchAngle - 0.005;
   }
-  else{
-    redraw();
-  }
+  redraw();
 }
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {     
