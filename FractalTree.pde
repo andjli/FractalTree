@@ -32,10 +32,10 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 }
 
 public void keyPressed(){
-  if(key == 'a'){
+  if(key == 'a' && branchAngle <= 0.9){
     branchAngle = branchAngle + 0.005;
   }
-  else if(key == 'd'){
+  else if(key == 'd' && branchAngle >= 0.1){
     branchAngle = branchAngle - 0.005;
   }
   redraw();
