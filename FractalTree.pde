@@ -14,15 +14,7 @@ public void draw()
   drawBranches(320,380,100,3*Math.PI/2);
   keyPressed();
 } 
-public void keyPressed(){
-  if(key == 'a'){
-    branchAngle = branchAngle + 0.005;
-  }
-  else if(key == 'd'){
-    branchAngle = branchAngle - 0.005;
-  }
-  redraw();
-}
+
 public void drawBranches(int x,int y, double branchLength, double angle) 
 {     
   double angle1 = angle + branchAngle;
@@ -38,4 +30,14 @@ public void drawBranches(int x,int y, double branchLength, double angle)
     drawBranches(endX1,endY1,branchLength,angle1);
     drawBranches(endX2,endY2,branchLength,angle2);
   }
+}
+
+public void keyPressed(){
+  if(key == 'a'){
+    branchAngle = branchAngle + 0.005;
+  }
+  else if(key == 'd'){
+    branchAngle = branchAngle - 0.005;
+  }
+  redraw();
 }
